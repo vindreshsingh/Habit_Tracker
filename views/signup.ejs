@@ -1,0 +1,29 @@
+<!-- signup View -->
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body text-center">
+        <h1>Welcome To Habit Tracker
+        </h1>
+        <h3 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> SignUp
+        </h3>
+        <%- include ("./partials/message") %>
+        <form action="/users/signup" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" id="name" required name="name" class="form-control" placeholder="Enter Name"
+              value="<%= typeof name != 'undefined' ? name : '' %>" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required class="form-control" placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            SignUp
+          </button>
+        </form>
+        <p class="lead mt-4">Returning User? <a href="/users/signin">SignIn</a></p>
+      </div>
+    </div>
+  </div>

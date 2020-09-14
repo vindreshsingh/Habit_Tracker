@@ -1,0 +1,22 @@
+<!-- Login View -->
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body text-center">
+        <h1>Habit Tracker
+          
+      </h1>
+        <h3 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> SignIn</h3>
+        <%- include ("./partials/message") %>
+        <form action="/users/signin" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required class="form-control" placeholder="Enter Email" />
+          </div>
+          <button type="submit" class="btn btn-success btn-block">SignIn</button>
+        </form>
+        <p class="lead mt-4">
+          You Are New User? <a href="/users/signup">SignUp</a>
+        </p>
+      </div>
+    </div>
+  </div>
